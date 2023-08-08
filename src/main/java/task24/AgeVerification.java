@@ -1,4 +1,4 @@
-package project;
+package task24;
 
 public class AgeVerification {
     public boolean isAgeValid(int age) {
