@@ -1,4 +1,4 @@
-package project;
+package task31;
 
 public class Cinema {
 
