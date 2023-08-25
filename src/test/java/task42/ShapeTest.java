@@ -16,7 +16,7 @@ public class ShapeTest {
 
     @Test
     public void testTriangle() {
-        Shape triangle = new Triangle(5.0, 3.0, 4.0, 4.0, 5.0);
+        Shape triangle = new Triangle(5.0, 3.0, 4.0, 4.0);
 
         assertEquals(7.5, triangle.getArea());
         assertEquals(13.0, triangle.getPerimeter());

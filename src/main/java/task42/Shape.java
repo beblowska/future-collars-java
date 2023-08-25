@@ -1,43 +1,43 @@
 package task42;
 
 public abstract class Shape {
-
     public abstract double getArea();
     public abstract double getPerimeter();
 }
 
-class Square extends Shape {
-    private double side;
-
+class Square extends Rectangle {
     public Square(double side) {
-        this.side = side;
-    }
-
-    @Override
-    public double getArea() {
-        return side * side;
-    }
-
-    @Override
-    public double getPerimeter() {
-        return 4 * side;
+        super(side, side);
     }
 }
 
 class Triangle extends Shape {
-
     private double base;
     private double height;
-    private double sideA;
     private double sideB;
     private double sideC;
 
-    public Triangle(double base, double height, double sideA, double sideB, double sideC) {
+    public Triangle(double base, double height, double sideB, double sideC) {
         this.base = base;
         this.height = height;
-        this.sideA = sideA;
         this.sideB = sideB;
         this.sideC = sideC;
+    }
+
+    public double getBase() {
+        return base;
+    }
+
+    public double getHeight() {
+        return height;
+    }
+
+    public double getSideB() {
+        return sideB;
+    }
+
+    public double getSideC() {
+        return sideC;
     }
 
     @Override
@@ -47,7 +47,7 @@ class Triangle extends Shape {
 
     @Override
     public double getPerimeter() {
-        return sideA + sideB + sideC;
+        return base + sideB + sideC;
     }
 }
 
@@ -78,13 +78,23 @@ class Rectangle extends Shape {
         this.width = width;
     }
 
+    public double getLength() {
+        return length;
+    }
+
+    public double getWidth() {
+        return width;
+    }
+
     @Override
     public double getArea() {
+
         return length * width;
     }
 
     @Override
     public double getPerimeter() {
+
         return 2 * (length + width);
     }
 }

@@ -3,7 +3,7 @@ package task42;
 public class Main {
     public static void main(String[] argv) {
         Shape square = new Square(5);
-        Shape triangle = new Triangle (6, 4, 7,8,9);
+        Shape triangle = new Triangle (6, 4, 7,8);
         Shape circle = new Circle(2.0);
         Shape rectangle = new Rectangle(6.0, 8.0);
 
