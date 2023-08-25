@@ -7,7 +7,7 @@ public class Main {
 
         System.out.println("Title: " + film.getTitle());
         System.out.println("Director: " + film.getDirector());
-        System.out.println("Film time in minutes: " + film.getFilmTimeInMinutes());
+        System.out.println("Film time in minutes: " + film.getDurationInMinutes());
         System.out.println("Production year: " + film.getProductionYear());
     }
 }

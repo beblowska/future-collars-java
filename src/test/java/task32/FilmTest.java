@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Assertions;
 
 public class FilmTest {
     @Test
-    public void testFilm(){
+    public void shouldCreateFilm(){
         String title = "Pocahontas";
         String director = "Eric Goldberg, Mike Gabriel";
         int filmInMinutes = 81;
@@ -15,7 +15,7 @@ public class FilmTest {
 
         Assertions.assertEquals(title, film.getTitle());
         Assertions.assertEquals(director, film.getDirector());
-        Assertions.assertEquals(filmInMinutes, film.getFilmTimeInMinutes());
+        Assertions.assertEquals(filmInMinutes, film.getDurationInMinutes());
         Assertions.assertEquals(productionYear, film.getProductionYear());
     }
 }

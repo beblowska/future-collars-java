@@ -1,15 +1,15 @@
 package task32;
 
 public class Film {
-    private String title;
-    private String director;
-    private int filmTimeInMinutes;
-    private int productionYear;
+    private final String title;
+    private final String director;
+    private final int durationInMinutes;
+    private final int productionYear;
 
     public Film(String title, String director, int filmTimeInMinutes, int productionYear) {
         this. title = title;
         this.director = director;
-        this.filmTimeInMinutes = filmTimeInMinutes;
+        this.durationInMinutes = filmTimeInMinutes;
         this.productionYear = productionYear;
     }
 
@@ -21,8 +21,8 @@ public class Film {
         return director;
     }
 
-    public int getFilmTimeInMinutes() {
-        return filmTimeInMinutes;
+    public int getDurationInMinutes() {
+        return durationInMinutes;
     }
 
     public int getProductionYear() {
