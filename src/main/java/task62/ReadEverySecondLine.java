@@ -5,9 +5,7 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class ReadEverySecondLine {
-    public static void main(String[] args) {
-        String filePath = ("src/main/resources62/data.txt");
-
+      public static void readEverySecondLine(String filePath) {
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
             String line;
             int lineCount = 1;
