@@ -1,6 +1,8 @@
 package task105;
 
 import java.time.LocalDate;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class PasswordValidator {
     private static final int MIN_LENGTH = 7;
@@ -39,5 +41,11 @@ public class PasswordValidator {
         String shortYearStr = currentYearStr.substring(2);
 
         return password.contains(currentYearStr) || password.contains(shortYearStr);
+    }
+
+    public static boolean containsSpecialCharacter(String password) {
+        Pattern pattern = Pattern.compile("[!@#$%^&*()_+\\-=\\[\\]{};':\"\\\\|,.<>\\/?]");
+        Matcher matcher = pattern.matcher(password);
+        return matcher.find();
     }
 }
