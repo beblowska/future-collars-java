@@ -1,26 +1,42 @@
 package task66;
 
 import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ConvertToUpperCase {
-    public static void main(String[] args) {
-        String inputFilePath = ("src/main/resources66/data.txt");
-        String outputFilePath = ("src/main/resources66/output.txt");
+    public static void processFile(String inputFilePath, String outputFilePath) {
+        List<String> lines = readLines(inputFilePath);
+        List<String> uppercasedLines = mapToUppercase(lines);
+        saveLines(outputFilePath, uppercasedLines);
+    }
 
-        try (BufferedReader reader = new BufferedReader(new FileReader(inputFilePath))) {
-            try (BufferedWriter writer = new BufferedWriter(new FileWriter(outputFilePath))) {
+    private static List<String> readLines(String filePath) {
+        List<String> lines = new ArrayList<>();
+        try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                lines.add(line);
+            }
+        } catch (IOException exception) {
+            exception.printStackTrace();
+        }
+        return lines;
+    }
 
-                String line;
+    private static List<String> mapToUppercase(List<String> lines) {
+        List<String> uppercasedLines = new ArrayList<>();
+        for (String line : lines) {
+            uppercasedLines.add(line.toUpperCase());
+        }
+        return uppercasedLines;
+    }
 
-                while ((line = reader.readLine()) != null) {
-                    String upperCase = line.toUpperCase();
-                    writer.write(upperCase);
-                    writer.newLine();
-                    System.out.println(" ");
-                    System.out.println("Original: " + line);
-                    System.out.println("Uppercase: " + upperCase);
-                }
-
+    private static void saveLines(String filePath, List<String> lines) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
+            for (String line : lines) {
+                writer.write(line);
+                writer.newLine();
             }
         } catch (IOException exception) {
             exception.printStackTrace();
