@@ -1,36 +1,26 @@
 package task81;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class NamesManipulation {
     public static List<String> removeDuplicates(List<String> inputList) {
-        List<String> uniqueNames = new ArrayList<>();
-        for (String name : inputList) {
-            if (!uniqueNames.contains(name)) {
-                uniqueNames.add(name);
-            }
-        }
-        return uniqueNames;
+        Set<String> uniqueNames = new HashSet<>(inputList);
+        return new ArrayList<>(uniqueNames);
     }
 
     public static List<String> reverseList(List<String> inputList) {
-        List<String> reversedList = new ArrayList<>();
-        for (int i = inputList.size() - 1; i >= 0; i--) {
-            reversedList.add(inputList.get(i));
-        }
+        List<String> reversedList = new ArrayList<>(inputList);
+        Collections.reverse(reversedList);
         return reversedList;
     }
 
-    public static List<String> replaceName(List<String> inputList, String oldName, String newName) {
-        List<String> modifiedList = new ArrayList<>();
-        for (String name : inputList) {
-            if (name.equals(oldName)) {
-                modifiedList.add(newName);
-            } else {
-                modifiedList.add(name);
-            }
-        }
+        public static List<String> replaceName(List<String> inputList, String oldName, String newName) {
+        List<String> modifiedList = new ArrayList<>(inputList);
+        Collections.replaceAll(modifiedList, oldName, newName);
         return modifiedList;
     }
 
