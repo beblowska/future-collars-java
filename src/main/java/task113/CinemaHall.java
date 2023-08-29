@@ -2,14 +2,14 @@ package task113;
 
 public class CinemaHall {
     private String name;
-    private String type;
+    private HallType type;
 
-    public CinemaHall(String name, String type) {
+    public CinemaHall(String name, HallType type) {
         this.name = name;
         this.type = type;
     }
 
-    public String getType() {
+    public HallType getType() {
         return type;
     }
 }
