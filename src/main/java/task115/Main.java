@@ -10,8 +10,6 @@ public class Main {
         Set<Character> uniqueLetters = UniqueLetters.findUniqueLetters(words);
 
         System.out.println("Unique letters in the words:");
-        for (char letter : uniqueLetters) {
-            System.out.print(letter + " ");
-        }
+        uniqueLetters.forEach(letter -> System.out.print(letter + " "));
     }
 }
