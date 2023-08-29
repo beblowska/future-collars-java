@@ -22,7 +22,7 @@ public class CinemaManager {
         cinemaHalls.add(new CinemaHall("Hall 10", "4D"));
     }
 
-    public Map<String, Long> countHallsByType() {
+    public Map<HallType, Long> countHallsByType() {
         return cinemaHalls.stream()
                 .collect(Collectors.groupingBy(CinemaHall::getType, Collectors.counting()));
     }
