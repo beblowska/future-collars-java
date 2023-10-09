@@ -1,7 +1,7 @@
 # future-collars Repository
 # Java Developer Bootcamp Repository
 
-Witaj w repozytorium future-collars, które obejmuje zagadnienia i zadania z Java Developer Bootcamp! 
+Witaj w repozytorium future-collars-java, które obejmuje zagadnienia i zadania z Java Developer Bootcamp! 
 To repozytorium zawiera różnorodne zadania i materiały z zakresu programowania w języku Java, które pokrywają wiele tematów, takich jak: 
 object-oriented concepts, multithreading, regex, testing with JUnit 5, Mockito, network programming, data structures, algorithms.
 
