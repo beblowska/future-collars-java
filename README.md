@@ -10,7 +10,7 @@ object-oriented concepts, multithreading, regex, testing with JUnit 5, Mockito, 
 Repozytorium jest zorganizowane w następujący sposób:
 
 - **Zadania**: Znajdziesz tutaj podkatalogi z zadaniami z różnych dziedzin, takimi jak programowanie obiektowe, wielowątkowość, testowanie, itp.
-  Każde zadanie ma własny folder z instrukcjami i przykładami kodu.
+  Każde zadanie ma własny folder przykładami kodu.
   
 
 ## Jak Korzystać z Repozytorium
